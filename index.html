@@ -255,6 +255,119 @@
       border-color: rgba(212, 175, 55, 0.6);
       color: #fbe69b;
     }
+
+    /* ========================================================= */
+    /* LUXURY GOLD FOIL & METALLIC LUSTER STYLES                */
+    /* ========================================================= */
+
+    .tarot-card-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 30%, #fffdfa 0%, #f6f0e4 100%);
+      box-shadow: 
+        0 4px 18px -2px rgba(0, 0, 0, 0.55),
+        inset 0 0 0 1px rgba(212, 175, 55, 0.45),
+        inset 0 0 12px rgba(212, 175, 55, 0.12);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tarot-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+      border-radius: inherit;
+      transition: transform 0.4s ease;
+    }
+
+    /* Soft, Luxurious Gold Foil Reflection (Non-glaring, eye-friendly) */
+    .tarot-gold-foil {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      background: linear-gradient(
+        130deg,
+        transparent 15%,
+        rgba(212, 175, 55, 0.04) 30%,
+        rgba(251, 230, 155, 0.14) 42%,
+        rgba(255, 245, 190, 0.24) 49%,
+        rgba(212, 175, 55, 0.22) 53%,
+        rgba(251, 230, 155, 0.12) 60%,
+        transparent 75%
+      );
+      background-size: 250% 250%;
+      background-position: -50% -50%;
+      mix-blend-mode: screen;
+      opacity: 0.48;
+      transition: opacity 0.5s ease, background-position 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+      will-change: background-position, opacity;
+      animation: gentleFoilSheen 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes gentleFoilSheen {
+      0% {
+        background-position: 0% 0%;
+        opacity: 0.35;
+      }
+      50% {
+        background-position: 70% 70%;
+        opacity: 0.55;
+      }
+      100% {
+        background-position: 130% 130%;
+        opacity: 0.35;
+      }
+    }
+
+    /* Interactive Hover: subtle, elegant shine increase without glare */
+    .group:hover .tarot-gold-foil,
+    .tarot-card-frame:hover .tarot-gold-foil,
+    .fan-card:hover .tarot-gold-foil {
+      opacity: 0.7;
+    }
+
+    /* Micro Gilded Filigree Border */
+    .tarot-inner-gold-border {
+      position: absolute;
+      inset: 3px;
+      border: 1px solid rgba(212, 175, 55, 0.38);
+      border-radius: calc(0.75rem - 3px);
+      pointer-events: none;
+      box-shadow: inset 0 0 5px rgba(212, 175, 55, 0.1);
+    }
+
+    /* Gold corner accents */
+    .tarot-inner-gold-border::before,
+    .tarot-inner-gold-border::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-color: rgba(245, 215, 120, 0.7);
+      pointer-events: none;
+    }
+    .tarot-inner-gold-border::before {
+      top: 1px;
+      left: 1px;
+      border-top: 1.5px solid rgba(245, 215, 120, 0.7);
+      border-left: 1.5px solid rgba(245, 215, 120, 0.7);
+    }
+    .tarot-inner-gold-border::after {
+      bottom: 1px;
+      right: 1px;
+      border-bottom: 1.5px solid rgba(245, 215, 120, 0.7);
+      border-right: 1.5px solid rgba(245, 215, 120, 0.7);
+    }
+
   </style>
 </head>
 <body class="relative selection:bg-amber-500/30 selection:text-amber-200">
@@ -1283,17 +1396,24 @@
     // 3. REAL RIDER-WAITE-SMITH 1909 CARD ART RENDERER (ALL 78 CARDS)
     // ---------------------------------------------------------
     function renderTarotCardFrontSVG(card) {
+      if (!card) return "";
       const idx = card.spriteIndex || 0;
-      const imgSrc = CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0];
+      const cdnUrl = card.cdnFile
+        ? `https://cdn.jsdelivr.net/npm/@cometpisces/tarot-kit-images@0.2.0/images/${card.cdnFile}`
+        : (CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0]);
+      const fallbackSrc = CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0];
 
       return `
-        <div class="w-full h-full relative overflow-hidden select-none bg-[#f5f0e1]">
+        <div class="tarot-card-frame select-none group/card">
           <img
-            src="${imgSrc}"
-            alt="${card.nameEn} - ${card.nameTh}"
-            class="w-full h-full object-fill block select-none pointer-events-none"
+            src="${cdnUrl}"
+            alt="${card.nameEn || 'Tarot Card'} - ${card.nameTh || ''}"
+            loading="lazy"
+            class="tarot-card-img"
+            onerror="this.onerror=null; this.src='${fallbackSrc}';"
           />
-          <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-amber-500/40 rounded-lg"></div>
+          <div class="tarot-inner-gold-border"></div>
+          <div class="tarot-gold-foil"></div>
         </div>
       `;
     }
@@ -1463,7 +1583,9 @@
               class="fan-card w-14 sm:w-16 h-24 sm:h-28 -ml-7 first:ml-0 rounded-lg overflow-hidden gold-border relative shrink-0 hover:-translate-y-4 focus:outline-none"
             >
               <img src="${CARD_BACK_IMAGE}" alt="Tarot Deck Card" class="w-full h-full object-cover pointer-events-none" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+              <div class="tarot-inner-gold-border"></div>
+              <div class="tarot-gold-foil"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
             </button>
           `;
         })
@@ -1530,15 +1652,17 @@
 
           <div class="${sizeClass} perspective-1000 group cursor-pointer ${isCrossing ? "celtic-cross-rotated" : ""}" data-card-slot="${slot.positionIndex}">
             <div class="card-3d-wrapper ${isFlipped ? "is-flipped" : ""}">
-              <!-- Card Back -->
-              <div class="card-face gold-border">
+              <!-- Card Back with Gold Foil Luster -->
+              <div class="card-face gold-border rounded-xl overflow-hidden relative">
                 <img src="${CARD_BACK_IMAGE}" alt="Card Back" class="w-full h-full object-cover" />
+                <div class="tarot-inner-gold-border"></div>
+                <div class="tarot-gold-foil"></div>
                 <div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition">
                   <span class="px-3 py-1 rounded-full bg-amber-400 text-slate-950 font-bold text-xs shadow">คลิกเปิดไพ่</span>
                 </div>
               </div>
-              <!-- Card Front (Authentic Rider-Waite-Smith Card Face) -->
-              <div class="card-face card-face-front gold-border-bright card-shimmer bg-[#f5f0e1]">
+              <!-- Card Front (Authentic HD Rider-Waite Card with Soft Gold Foil) -->
+              <div class="card-face card-face-front gold-border-bright rounded-xl overflow-hidden">
                 <div class="w-full h-full ${slot.reversed ? "card-reversed-inner" : ""}">
                   ${renderTarotCardFrontSVG(card)}
                 </div>
