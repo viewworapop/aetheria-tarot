@@ -368,6 +368,108 @@
       border-right: 1.5px solid rgba(245, 215, 120, 0.7);
     }
 
+
+    /* ========================================================= */
+    /* ART NOUVEAU MASTER CARD FRAMEWORK (ALL 78 CARDS)          */
+    /* ========================================================= */
+
+    .tarot-card-frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background: #0d091b;
+      box-shadow: 
+        0 6px 20px -2px rgba(0, 0, 0, 0.75),
+        inset 0 0 0 1px rgba(212, 175, 55, 0.5),
+        inset 0 0 15px rgba(212, 175, 55, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Central Arched Window */
+    .tarot-arch-window {
+      position: absolute;
+      top: 9%;
+      bottom: 8.5%;
+      left: 6%;
+      right: 6%;
+      border-radius: 120px 120px 6px 6px;
+      overflow: hidden;
+      border: 2px solid rgba(212, 175, 55, 0.8);
+      box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.8),
+        inset 0 0 12px rgba(0, 0, 0, 0.45);
+      background: #fbf7ee;
+    }
+
+    /* Top Oval Medallion with Gold Trim */
+    .tarot-top-medallion {
+      position: absolute;
+      top: 3.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 34px;
+      height: 26px;
+      padding: 0 6px;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 50% 35%, #fffdfa 0%, #f6efe1 100%);
+      border: 1.8px solid rgba(212, 175, 55, 0.95);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.75), inset 0 0 4px rgba(212, 175, 55, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel Decorative', 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1a1208;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    /* Bottom Title Ribbon with Gold Trim */
+    .tarot-bottom-ribbon {
+      position: absolute;
+      bottom: 3%;
+      left: 4.5%;
+      right: 4.5%;
+      height: 23px;
+      background: radial-gradient(circle at 50% 30%, #fffdfa 0%, #f7efe1 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.92);
+      border-radius: 9999px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8), inset 0 0 5px rgba(212, 175, 55, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 6px;
+      font-family: 'Cinzel Decorative', 'Inter', serif;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #1a1208;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    /* Ornate Art Nouveau Gold Botanical Corner Filigree */
+    .tarot-nouveau-vines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: 
+        radial-gradient(circle at 7% 7%, rgba(212, 175, 55, 0.35) 0%, transparent 35%),
+        radial-gradient(circle at 93% 7%, rgba(212, 175, 55, 0.35) 0%, transparent 35%),
+        radial-gradient(circle at 7% 93%, rgba(212, 175, 55, 0.35) 0%, transparent 35%),
+        radial-gradient(circle at 93% 93%, rgba(212, 175, 55, 0.35) 0%, transparent 35%);
+      z-index: 5;
+    }
+
   </style>
 </head>
 <body class="relative selection:bg-amber-500/30 selection:text-amber-200">
@@ -1000,7 +1102,7 @@
         advice: "เชื่อมั่นในศักยภาพของตนเองและเริ่มลงมือทำทันที ทุกเครื่องมือพร้อมอยู่ตรงหน้าคุณแล้ว"
       },
       {
-        id: "major-2", number: 2, roman: "II", nameEn: "The High Priestess", nameTh: "ราชินีพระจันทร์ • ผู้หยั่งรู้ความลับ", cdnFile: "02-TheHighPriestess.png",
+        id: "major-2", number: 2, roman: "II", nameEn: "The High Priestess", nameTh: "ราชินีพระจันทร์ • ผู้หยั่งรู้ความลับ", cdnFile: "02-TheHighPriestess.png", customImg: "assets/cards/02-TheHighPriestess-nouveau.jpg",
         suit: "major", element: "water", planet: "ดวงจันทร์ (Moon)", iconType: "priestess",
         keywords: ["ลางสังหรณ์", "ปัญญาภายใน", "ความลึกลับ", "การเฝ้าสังเกตอย่างสงบ"],
         upright: "จงฟังเสียงสัญชาตญาณและลางสังหรณ์ของตัวเอง มีบางสิ่งซ่อนอยู่เบื้องหลังที่ยังไม่เปิดเผยทั้งหมด การนิ่งสังเกตจะให้คำตอบได้ดีกว่าการเร่งรัด",
@@ -1398,22 +1500,57 @@
     function renderTarotCardFrontSVG(card) {
       if (!card) return "";
       const idx = card.spriteIndex || 0;
-      const cdnUrl = card.customImg
-        ? card.customImg
-        : (card.cdnFile
-          ? `https://cdn.jsdelivr.net/npm/@cometpisces/tarot-kit-images@0.2.0/images/${card.cdnFile}`
-          : (CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0]));
+
+      // Full Custom Art Nouveau Illustration
+      if (card.customImg) {
+        return `
+          <div class="tarot-card-frame select-none group/card">
+            <img
+              src="${card.customImg}"
+              alt="${card.nameEn || 'Tarot Card'} - ${card.nameTh || ''}"
+              loading="lazy"
+              class="w-full h-full object-cover block select-none pointer-events-none"
+            />
+            <div class="tarot-inner-gold-border"></div>
+            <div class="tarot-gold-foil"></div>
+          </div>
+        `;
+      }
+
+      // Universal Art Nouveau Master Frame Template (for all other cards in deck)
+      const cdnUrl = card.cdnFile
+        ? `https://cdn.jsdelivr.net/npm/@cometpisces/tarot-kit-images@0.2.0/images/${card.cdnFile}`
+        : (CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0]);
       const fallbackSrc = CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0];
 
       return `
-        <div class="tarot-card-frame select-none group/card">
-          <img
-            src="${cdnUrl}"
-            alt="${card.nameEn || 'Tarot Card'} - ${card.nameTh || ''}"
-            loading="lazy"
-            class="tarot-card-img"
-            onerror="this.onerror=null; this.src='${fallbackSrc}';"
-          />
+        <div class="tarot-card-frame select-none group/card bg-[#0d091a]">
+          <!-- 1. Central Arched Window -->
+          <div class="tarot-arch-window">
+            <img
+              src="${cdnUrl}"
+              alt="${card.nameEn || 'Tarot Card'} - ${card.nameTh || ''}"
+              loading="lazy"
+              class="w-full h-full object-cover select-none pointer-events-none"
+              onerror="this.onerror=null; this.src='${fallbackSrc}';"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+
+          <!-- 2. Art Nouveau Ornate Corner Gold Vines -->
+          <div class="tarot-nouveau-vines"></div>
+
+          <!-- 3. Top Oval Medallion with Numeral -->
+          <div class="tarot-top-medallion">
+            <span>${card.roman || card.number}</span>
+          </div>
+
+          <!-- 4. Bottom Title Ribbon with Card Name -->
+          <div class="tarot-bottom-ribbon">
+            <span>${card.nameEn.toUpperCase()}</span>
+          </div>
+
+          <!-- 5. Gilded Filigree Border & Gold Foil Luster Layer -->
           <div class="tarot-inner-gold-border"></div>
           <div class="tarot-gold-foil"></div>
         </div>
