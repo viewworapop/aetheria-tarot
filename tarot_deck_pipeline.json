@@ -4,15 +4,15 @@
   "quota_reset_utc": "2026-10-27T21:17:27Z",
   "status_summary": {
     "total": 78,
-    "completed": 5,
-    "pending": 73
+    "completed": 6,
+    "pending": 72
   },
   "cards": [
     { "id": 0, "name": "The Fool", "arcana": "major", "file": "00-TheFool-nouveau.png", "status": "COMPLETED" },
     { "id": 1, "name": "The Magician", "arcana": "major", "file": "01-TheMagician-nouveau.jpg", "status": "COMPLETED" },
     { "id": 2, "name": "The High Priestess", "arcana": "major", "file": "02-TheHighPriestess-nouveau.jpg", "status": "COMPLETED" },
     { "id": 3, "name": "The Empress", "arcana": "major", "file": "03-TheEmpress-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 4, "name": "The Emperor", "arcana": "major", "file": "04-TheEmperor-nouveau.jpg", "status": "PENDING" },
+    { "id": 4, "name": "The Emperor", "arcana": "major", "file": "04-TheEmperor-nouveau.jpg", "status": "COMPLETED" },
     { "id": 5, "name": "The Hierophant", "arcana": "major", "file": "05-TheHierophant-nouveau.jpg", "status": "PENDING" },
     { "id": 6, "name": "The Lovers", "arcana": "major", "file": "06-TheLovers-nouveau.jpg", "status": "COMPLETED" },
     { "id": 7, "name": "The Chariot", "arcana": "major", "file": "07-TheChariot-nouveau.jpg", "status": "PENDING" },
