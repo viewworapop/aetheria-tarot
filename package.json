@@ -1,0 +1,8 @@
+{
+  "name": "aetheria-tarot",
+  "version": "1.0.0",
+  "description": "AETHERIA TAROT - Rider-Waite 78 Cards Reading App",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
