@@ -1501,7 +1501,7 @@
       if (!card) return "";
       const idx = card.spriteIndex || 0;
 
-      // Full Custom Art Nouveau Illustration
+      // 1. Full Custom Art Nouveau Illustration (The Fool, Magician, High Priestess, Lovers)
       if (card.customImg) {
         return `
           <div class="tarot-card-frame select-none group/card">
@@ -1517,40 +1517,66 @@
         `;
       }
 
-      // Universal Art Nouveau Master Frame Template (for all other cards in deck)
+      // 2. Universal Vector Art Nouveau Master Frame (All other cards in deck)
       const cdnUrl = card.cdnFile
         ? `https://cdn.jsdelivr.net/npm/@cometpisces/tarot-kit-images@0.2.0/images/${card.cdnFile}`
         : (CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0]);
       const fallbackSrc = CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0];
+      const romanNum = card.roman || card.number || "•";
+      const cardTitle = (card.nameEn || "TAROT").toUpperCase();
 
       return `
         <div class="tarot-card-frame select-none group/card bg-[#0d091a]">
-          <!-- 1. Central Arched Window -->
+          <!-- Central Artwork Window -->
           <div class="tarot-arch-window">
             <img
               src="${cdnUrl}"
-              alt="${card.nameEn || 'Tarot Card'} - ${card.nameTh || ''}"
+              alt="${card.nameEn} - ${card.nameTh}"
               loading="lazy"
               class="w-full h-full object-cover select-none pointer-events-none"
+              style="filter: contrast(1.06) saturate(1.16) brightness(1.02);"
               onerror="this.onerror=null; this.src='${fallbackSrc}';"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
           </div>
 
-          <!-- 2. Art Nouveau Ornate Corner Gold Vines -->
-          <div class="tarot-nouveau-vines"></div>
+          <!-- Crisp Vector Art Nouveau Ornate Border & Plaques -->
+          <svg viewBox="0 0 320 568" class="absolute inset-0 w-full h-full pointer-events-none select-none z-10" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldGrad_${card.id}" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fbe69b"/>
+                <stop offset="35%" stop-color="#d4af37"/>
+                <stop offset="70%" stop-color="#99741c"/>
+                <stop offset="100%" stop-color="#fbe69b"/>
+              </linearGradient>
+              <linearGradient id="ivoryGrad_${card.id}" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fffefb"/>
+                <stop offset="100%" stop-color="#f4ede0"/>
+              </linearGradient>
+            </defs>
 
-          <!-- 3. Top Oval Medallion with Numeral -->
-          <div class="tarot-top-medallion">
-            <span>${card.roman || card.number}</span>
-          </div>
+            <!-- Outer Filigree Border Lines -->
+            <rect x="5" y="5" width="310" height="558" rx="10" stroke="url(#goldGrad_${card.id})" stroke-width="1.8" fill="none"/>
+            <rect x="8.5" y="8.5" width="303" height="551" rx="8" stroke="url(#goldGrad_${card.id})" stroke-width="0.7" stroke-opacity="0.6" fill="none"/>
 
-          <!-- 4. Bottom Title Ribbon with Card Name -->
-          <div class="tarot-bottom-ribbon">
-            <span>${card.nameEn.toUpperCase()}</span>
-          </div>
+            <!-- Corner Art Nouveau Scrolls -->
+            <path d="M 12 30 C 12 18, 18 12, 30 12 C 24 17, 17 24, 12 30 Z M 308 30 C 308 18, 302 12, 290 12 C 296 17, 303 24, 308 30 Z" fill="url(#goldGrad_${card.id})" opacity="0.9"/>
+            <path d="M 12 538 C 12 550, 18 556, 30 556 C 24 551, 17 544, 12 538 Z M 308 538 C 308 550, 302 556, 290 556 C 296 551, 303 544, 308 538 Z" fill="url(#goldGrad_${card.id})" opacity="0.9"/>
 
-          <!-- 5. Gilded Filigree Border & Gold Foil Luster Layer -->
+            <!-- Arch Window Gold Outline -->
+            <path d="M 20 170 C 20 56, 300 56, 300 170 L 300 510 L 20 510 Z" stroke="url(#goldGrad_${card.id})" stroke-width="2" fill="none"/>
+            <path d="M 22.5 171 C 22.5 60, 297.5 60, 297.5 171 L 297.5 507.5 L 22.5 507.5 Z" stroke="url(#goldGrad_${card.id})" stroke-width="0.6" stroke-opacity="0.5" fill="none"/>
+
+            <!-- Top Oval Medallion Plaque -->
+            <ellipse cx="160" cy="38" rx="25" ry="18" fill="url(#ivoryGrad_${card.id})" stroke="url(#goldGrad_${card.id})" stroke-width="2"/>
+            <text x="160" y="44" text-anchor="middle" font-family="'Cinzel Decorative', 'Cormorant Garamond', serif" font-size="14" font-weight="700" fill="#1b120c">${romanNum}</text>
+
+            <!-- Bottom Curved Title Ribbon Banner -->
+            <path d="M 30 531 C 45 523, 275 523, 290 531 C 297 535, 287 545, 275 545 L 45 545 C 33 545, 23 535, 30 531 Z" fill="url(#ivoryGrad_${card.id})" stroke="url(#goldGrad_${card.id})" stroke-width="1.8"/>
+            <text x="160" y="540" text-anchor="middle" font-family="'Cinzel Decorative', 'Inter', serif" font-size="9" font-weight="700" letter-spacing="1.2" fill="#1b120c">${cardTitle}</text>
+          </svg>
+
+          <!-- Gold Foil Reflection & Inner Highlight -->
           <div class="tarot-inner-gold-border"></div>
           <div class="tarot-gold-foil"></div>
         </div>
