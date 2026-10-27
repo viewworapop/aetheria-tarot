@@ -266,7 +266,7 @@
       height: 100%;
       border-radius: 0.75rem;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 30%, #fffdfa 0%, #f6f0e4 100%);
+      background: #0d0a1b;
       box-shadow: 
         0 4px 18px -2px rgba(0, 0, 0, 0.55),
         inset 0 0 0 1px rgba(212, 175, 55, 0.45),
@@ -978,7 +978,7 @@
     // ---------------------------------------------------------
     const MAJOR_ARCANA_DATA = [
       {
-        id: "major-0", number: 0, roman: "0", nameEn: "The Fool", nameTh: "เดอะฟูล • ผู้เดินทางแห่งอิสระ", cdnFile: "00-TheFool.png",
+        id: "major-0", number: 0, roman: "0", nameEn: "The Fool", nameTh: "เดอะฟูล • ผู้เดินทางแห่งอิสระ", cdnFile: "00-TheFool.png", customImg: "assets/cards/00-TheFool-nouveau.png",
         suit: "major", element: "air", planet: "ดาวมฤตยู (Uranus)", iconType: "fool",
         keywords: ["การเริ่มต้นใหม่", "ความบริสุทธิ์ไร้กรอบ", "การผจญภัย", "ความกล้าก้าวกระโดด"],
         upright: "ก้าวเข้าสู่เส้นทางใหม่ด้วยหัวใจที่เปิดกว้างและเป็นอิสระ แม้ยังไม่มีแผนการที่ตายตัว แต่สัญชาตญาณและความคิดสร้างสรรค์จะนำพาโอกาสที่คาดไม่ถึงมาให้",
@@ -989,7 +989,7 @@
         advice: "เปิดใจรับสิ่งใหม่ด้วยความเบิกบาน แต่ย้ำเตือนตัวเองให้มองทางข้างหน้าอย่างมีสติ"
       },
       {
-        id: "major-1", number: 1, roman: "I", nameEn: "The Magician", nameTh: "เดอะเมจิกเชียน • จอมเวทผู้สร้างสรรค์", cdnFile: "01-TheMagician.png",
+        id: "major-1", number: 1, roman: "I", nameEn: "The Magician", nameTh: "เดอะเมจิกเชียน • จอมเวทผู้สร้างสรรค์", cdnFile: "01-TheMagician.png", customImg: "assets/cards/01-TheMagician-nouveau.jpg",
         suit: "major", element: "air", planet: "ดาวพุธ (Mercury)", iconType: "magician",
         keywords: ["ความสามารถรอบด้าน", "การลงมือทำ", "วาทศิลป์", "การเสกความคิดให้เป็นจริง"],
         upright: "คุณมีทรัพยากร ความรู้ และทักษะครบทั้ง 4 ธาตุอยู่ในมือแล้ว ถึงเวลาเปลี่ยนไอเดียให้กลายเป็นความจริงด้วยความมั่นใจและการสื่อสารที่ทรงพลัง",
@@ -1398,9 +1398,11 @@
     function renderTarotCardFrontSVG(card) {
       if (!card) return "";
       const idx = card.spriteIndex || 0;
-      const cdnUrl = card.cdnFile
-        ? `https://cdn.jsdelivr.net/npm/@cometpisces/tarot-kit-images@0.2.0/images/${card.cdnFile}`
-        : (CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0]);
+      const cdnUrl = card.customImg
+        ? card.customImg
+        : (card.cdnFile
+          ? `https://cdn.jsdelivr.net/npm/@cometpisces/tarot-kit-images@0.2.0/images/${card.cdnFile}`
+          : (CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0]));
       const fallbackSrc = CARD_IMAGE_URIS[idx] || CARD_IMAGE_URIS[0];
 
       return `
