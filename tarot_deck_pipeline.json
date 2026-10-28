@@ -4,8 +4,8 @@
   "quota_reset_utc": "2026-10-28T07:17:27Z",
   "status_summary": {
     "total": 78,
-    "completed": 10,
-    "pending": 68
+    "completed": 11,
+    "pending": 67
   },
   "cards": [
     { "id": 0, "name": "The Fool", "arcana": "major", "file": "00-TheFool-nouveau.png", "status": "COMPLETED" },
@@ -18,7 +18,7 @@
     { "id": 7, "name": "The Chariot", "arcana": "major", "file": "07-TheChariot-nouveau.jpg", "status": "COMPLETED" },
     { "id": 8, "name": "Strength", "arcana": "major", "file": "08-Strength-nouveau.jpg", "status": "COMPLETED" },
     { "id": 9, "name": "The Hermit", "arcana": "major", "file": "09-TheHermit-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 10, "name": "Wheel of Fortune", "arcana": "major", "file": "10-WheelOfFortune-nouveau.jpg", "status": "PENDING" },
+    { "id": 10, "name": "Wheel of Fortune", "arcana": "major", "file": "10-WheelOfFortune-nouveau.jpg", "status": "COMPLETED" },
     { "id": 11, "name": "Justice", "arcana": "major", "file": "11-Justice-nouveau.jpg", "status": "PENDING" },
     { "id": 12, "name": "The Hanged Man", "arcana": "major", "file": "12-TheHangedMan-nouveau.jpg", "status": "PENDING" },
     { "id": 13, "name": "Death", "arcana": "major", "file": "13-Death-nouveau.jpg", "status": "PENDING" },
