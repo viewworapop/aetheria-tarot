@@ -4,8 +4,8 @@
   "quota_reset_utc": "2026-11-03T16:17:27Z",
   "status_summary": {
     "total": 78,
-    "completed": 15,
-    "pending": 63
+    "completed": 16,
+    "pending": 62
   },
   "cards": [
     { "id": 0, "name": "The Fool", "arcana": "major", "file": "00-TheFool-nouveau.png", "status": "COMPLETED" },
@@ -23,7 +23,7 @@
     { "id": 12, "name": "The Hanged Man", "arcana": "major", "file": "12-TheHangedMan-nouveau.jpg", "status": "COMPLETED" },
     { "id": 13, "name": "Death", "arcana": "major", "file": "13-Death-nouveau.jpg", "status": "COMPLETED" },
     { "id": 14, "name": "Temperance", "arcana": "major", "file": "14-Temperance-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 15, "name": "The Devil", "arcana": "major", "file": "15-TheDevil-nouveau.jpg", "status": "PENDING" },
+    { "id": 15, "name": "The Devil", "arcana": "major", "file": "15-TheDevil-nouveau.jpg", "status": "COMPLETED" },
     { "id": 16, "name": "The Tower", "arcana": "major", "file": "16-TheTower-nouveau.jpg", "status": "PENDING" },
     { "id": 17, "name": "The Star", "arcana": "major", "file": "17-TheStar-nouveau.jpg", "status": "PENDING" },
     { "id": 18, "name": "The Moon", "arcana": "major", "file": "18-TheMoon-nouveau.jpg", "status": "PENDING" },
