@@ -1408,21 +1408,28 @@
       ["pentacles", 14, "King of Pentacles", "ราชาเหรียญ • จักรพรรดิแห่งความมั่งคั่งและธุรกิจที่ยิ่งใหญ่", ["ความร่ำรวยระดับเศรษฐี", "ความสำเร็จทางธุรกิจ", "ผู้ใหญ่อุปถัมภ์เรื่องเงิน"], "จุดสูงสุดของความสำเร็จทางธุรกิจและการเงิน มีหัวการค้าที่เฉียบแหลม มั่นคง และเป็นร่มโพธิ์ร่มไทรให้คนรอบข้าง", "การให้ความสำคัญกับวัตถุมากเกินไปจนลืมเวลาพักผ่อน", "พบคู่ครองที่ฐานะมั่นคง เป็นผู้ใหญ่ ใจป้ำ และดูแลครอบครัวได้อย่างสมบูรณ์", "ก้าวสู่ความสำเร็จระดับผู้นำองค์กร เจ้าของธุรกิจ หรือนักลงทุนรายใหญ่", "มั่งคั่งร่ำรวย ประสบความสำเร็จในการลงทุนและทรัพย์สินขนาดใหญ่", "ใช้ความมั่งคั่งและประสบการณ์ของคุณสร้างคุณค่าที่ยั่งยืนให้ตนเองและสังคม"]
     ];
 
+    const COMPLETED_MINOR_CUSTOM_IMGS = {
+      "wands-1": "assets/cards/wands-01-nouveau.jpg",
+      "wands-2": "assets/cards/wands-02-nouveau.jpg"
+    };
+
     const ALL_TAROT_CARDS = [
       ...MAJOR_ARCANA_DATA.map((c, i) => ({ ...c, spriteIndex: i })),
       ...MINOR_CARDS_RAW.map((row, idx) => {
         const suit = row[0];
         const num = row[1];
+        const cardId = `${suit}-${num}`;
         const prefix = SUIT_META[suit].cdnPrefix;
         const numStr = num < 10 ? `0${num}` : String(num);
         return {
-          id: `${suit}-${num}`,
+          id: cardId,
           spriteIndex: 22 + idx,
           number: num,
           roman: num === 1 ? "A" : num === 11 ? "P" : num === 12 ? "Kn" : num === 13 ? "Q" : num === 14 ? "K" : String(num),
           nameEn: row[2],
           nameTh: row[3],
           cdnFile: `${prefix}${numStr}.png`,
+          customImg: COMPLETED_MINOR_CUSTOM_IMGS[cardId] || undefined,
           suit: suit,
           element: SUIT_META[suit].element,
           planet: SUIT_META[suit].elementTh,
