@@ -1,110 +1,558 @@
 {
   "deck_name": "Aetheria Art Nouveau Tarot 78 Cards",
   "style_reference": "00-TheFool-nouveau.png",
-  "quota_reset_utc": "2026-11-03T16:17:27Z",
+  "completed_at": "2026-10-29T04:51:09.230Z",
   "status_summary": {
     "total": 78,
-    "completed": 70,
-    "pending": 8
+    "completed": 78,
+    "pending": 0
   },
   "cards": [
-    { "id": 0, "name": "The Fool", "arcana": "major", "file": "00-TheFool-nouveau.png", "status": "COMPLETED" },
-    { "id": 1, "name": "The Magician", "arcana": "major", "file": "01-TheMagician-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 2, "name": "The High Priestess", "arcana": "major", "file": "02-TheHighPriestess-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 3, "name": "The Empress", "arcana": "major", "file": "03-TheEmpress-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 4, "name": "The Emperor", "arcana": "major", "file": "04-TheEmperor-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 5, "name": "The Hierophant", "arcana": "major", "file": "05-TheHierophant-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 6, "name": "The Lovers", "arcana": "major", "file": "06-TheLovers-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 7, "name": "The Chariot", "arcana": "major", "file": "07-TheChariot-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 8, "name": "Strength", "arcana": "major", "file": "08-Strength-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 9, "name": "The Hermit", "arcana": "major", "file": "09-TheHermit-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 10, "name": "Wheel of Fortune", "arcana": "major", "file": "10-WheelOfFortune-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 11, "name": "Justice", "arcana": "major", "file": "11-Justice-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 12, "name": "The Hanged Man", "arcana": "major", "file": "12-TheHangedMan-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 13, "name": "Death", "arcana": "major", "file": "13-Death-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 14, "name": "Temperance", "arcana": "major", "file": "14-Temperance-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 15, "name": "The Devil", "arcana": "major", "file": "15-TheDevil-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 16, "name": "The Tower", "arcana": "major", "file": "16-TheTower-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 17, "name": "The Star", "arcana": "major", "file": "17-TheStar-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 18, "name": "The Moon", "arcana": "major", "file": "18-TheMoon-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 19, "name": "The Sun", "arcana": "major", "file": "19-TheSun-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 20, "name": "Judgement", "arcana": "major", "file": "20-Judgement-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 21, "name": "The World", "arcana": "major", "file": "21-TheWorld-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 22, "name": "Ace of Wands", "arcana": "wands", "file": "wands-01-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 23, "name": "Two of Wands", "arcana": "wands", "file": "wands-02-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 24, "name": "Three of Wands", "arcana": "wands", "file": "wands-03-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 25, "name": "Four of Wands", "arcana": "wands", "file": "wands-04-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 26, "name": "Five of Wands", "arcana": "wands", "file": "wands-05-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 27, "name": "Six of Wands", "arcana": "wands", "file": "wands-06-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 28, "name": "Seven of Wands", "arcana": "wands", "file": "wands-07-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 29, "name": "Eight of Wands", "arcana": "wands", "file": "wands-08-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 30, "name": "Nine of Wands", "arcana": "wands", "file": "wands-09-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 31, "name": "Ten of Wands", "arcana": "wands", "file": "wands-10-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 32, "name": "Page of Wands", "arcana": "wands", "file": "wands-11-page-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 33, "name": "Knight of Wands", "arcana": "wands", "file": "wands-12-knight-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 34, "name": "Queen of Wands", "arcana": "wands", "file": "wands-13-queen-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 35, "name": "King of Wands", "arcana": "wands", "file": "wands-14-king-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 36, "name": "Ace of Cups", "arcana": "cups", "file": "cups-01-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 37, "name": "Two of Cups", "arcana": "cups", "file": "cups-02-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 38, "name": "Three of Cups", "arcana": "cups", "file": "cups-03-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 39, "name": "Four of Cups", "arcana": "cups", "file": "cups-04-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 40, "name": "Five of Cups", "arcana": "cups", "file": "cups-05-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 41, "name": "Six of Cups", "arcana": "cups", "file": "cups-06-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 42, "name": "Seven of Cups", "arcana": "cups", "file": "cups-07-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 43, "name": "Eight of Cups", "arcana": "cups", "file": "cups-08-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 44, "name": "Nine of Cups", "arcana": "cups", "file": "cups-09-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 45, "name": "Ten of Cups", "arcana": "cups", "file": "cups-10-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 46, "name": "Page of Cups", "arcana": "cups", "file": "cups-11-page-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 47, "name": "Knight of Cups", "arcana": "cups", "file": "cups-12-knight-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 48, "name": "Queen of Cups", "arcana": "cups", "file": "cups-13-queen-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 49, "name": "King of Cups", "arcana": "cups", "file": "cups-14-king-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 50, "name": "Ace of Swords", "arcana": "swords", "file": "swords-01-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 51, "name": "Two of Swords", "arcana": "swords", "file": "swords-02-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 52, "name": "Three of Swords", "arcana": "swords", "file": "swords-03-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 53, "name": "Four of Swords", "arcana": "swords", "file": "swords-04-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 54, "name": "Five of Swords", "arcana": "swords", "file": "swords-05-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 55, "name": "Six of Swords", "arcana": "swords", "file": "swords-06-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 56, "name": "Seven of Swords", "arcana": "swords", "file": "swords-07-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 57, "name": "Eight of Swords", "arcana": "swords", "file": "swords-08-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 58, "name": "Nine of Swords", "arcana": "swords", "file": "swords-09-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 59, "name": "Ten of Swords", "arcana": "swords", "file": "swords-10-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 60, "name": "Page of Swords", "arcana": "swords", "file": "swords-11-page-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 61, "name": "Knight of Swords", "arcana": "swords", "file": "swords-12-knight-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 62, "name": "Queen of Swords", "arcana": "swords", "file": "swords-13-queen-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 63, "name": "King of Swords", "arcana": "swords", "file": "swords-14-king-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 64, "name": "Ace of Pentacles", "arcana": "pentacles", "file": "pentacles-01-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 65, "name": "Two of Pentacles", "arcana": "pentacles", "file": "pentacles-02-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 66, "name": "Three of Pentacles", "arcana": "pentacles", "file": "pentacles-03-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 67, "name": "Four of Pentacles", "arcana": "pentacles", "file": "pentacles-04-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 68, "name": "Five of Pentacles", "arcana": "pentacles", "file": "pentacles-05-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 69, "name": "Six of Pentacles", "arcana": "pentacles", "file": "pentacles-06-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 50, "name": "Ace of Swords", "arcana": "swords", "file": "swords-01-nouveau.jpg", "status": "PENDING" },
-    { "id": 51, "name": "Two of Swords", "arcana": "swords", "file": "swords-02-nouveau.jpg", "status": "PENDING" },
-    { "id": 52, "name": "Three of Swords", "arcana": "swords", "file": "swords-03-nouveau.jpg", "status": "PENDING" },
-    { "id": 53, "name": "Four of Swords", "arcana": "swords", "file": "swords-04-nouveau.jpg", "status": "PENDING" },
-    { "id": 54, "name": "Five of Swords", "arcana": "swords", "file": "swords-05-nouveau.jpg", "status": "PENDING" },
-    { "id": 55, "name": "Six of Swords", "arcana": "swords", "file": "swords-06-nouveau.jpg", "status": "PENDING" },
-    { "id": 56, "name": "Seven of Swords", "arcana": "swords", "file": "swords-07-nouveau.jpg", "status": "PENDING" },
-    { "id": 57, "name": "Eight of Swords", "arcana": "swords", "file": "swords-08-nouveau.jpg", "status": "PENDING" },
-    { "id": 58, "name": "Nine of Swords", "arcana": "swords", "file": "swords-09-nouveau.jpg", "status": "PENDING" },
-    { "id": 59, "name": "Ten of Swords", "arcana": "swords", "file": "swords-10-nouveau.jpg", "status": "PENDING" },
-    { "id": 60, "name": "Page of Swords", "arcana": "swords", "file": "swords-11-page-nouveau.jpg", "status": "PENDING" },
-    { "id": 61, "name": "Knight of Swords", "arcana": "swords", "file": "swords-12-knight-nouveau.jpg", "status": "PENDING" },
-    { "id": 62, "name": "Queen of Swords", "arcana": "swords", "file": "swords-13-queen-nouveau.jpg", "status": "PENDING" },
-    { "id": 63, "name": "King of Swords", "arcana": "swords", "file": "swords-14-king-nouveau.jpg", "status": "PENDING" },
-    { "id": 64, "name": "Ace of Pentacles", "arcana": "pentacles", "file": "pentacles-01-nouveau.jpg", "status": "PENDING" },
-    { "id": 65, "name": "Two of Pentacles", "arcana": "pentacles", "file": "pentacles-02-nouveau.jpg", "status": "PENDING" },
-    { "id": 66, "name": "Three of Pentacles", "arcana": "pentacles", "file": "pentacles-03-nouveau.jpg", "status": "PENDING" },
-    { "id": 67, "name": "Four of Pentacles", "arcana": "pentacles", "file": "pentacles-04-nouveau.jpg", "status": "PENDING" },
-    { "id": 68, "name": "Five of Pentacles", "arcana": "pentacles", "file": "pentacles-05-nouveau.jpg", "status": "PENDING" },
-    { "id": 69, "name": "Six of Pentacles", "arcana": "pentacles", "file": "pentacles-06-nouveau.jpg", "status": "PENDING" },
-    { "id": 70, "name": "Seven of Pentacles", "arcana": "pentacles", "file": "pentacles-07-nouveau.jpg", "status": "PENDING" },
-    { "id": 71, "name": "Eight of Pentacles", "arcana": "pentacles", "file": "pentacles-08-nouveau.jpg", "status": "PENDING" },
-    { "id": 72, "name": "Nine of Pentacles", "arcana": "pentacles", "file": "pentacles-09-nouveau.jpg", "status": "PENDING" },
-    { "id": 73, "name": "Ten of Pentacles", "arcana": "pentacles", "file": "pentacles-10-nouveau.jpg", "status": "PENDING" },
-    { "id": 74, "name": "Page of Pentacles", "arcana": "pentacles", "file": "pentacles-11-page-nouveau.jpg", "status": "PENDING" },
-    { "id": 75, "name": "Knight of Pentacles", "arcana": "pentacles", "file": "pentacles-12-knight-nouveau.jpg", "status": "PENDING" },
-    { "id": 76, "name": "Queen of Pentacles", "arcana": "pentacles", "file": "pentacles-13-queen-nouveau.jpg", "status": "PENDING" },
-    { "id": 77, "name": "King of Pentacles", "arcana": "pentacles", "file": "pentacles-14-king-nouveau.jpg", "status": "PENDING" }
+    {
+      "id": 0,
+      "name": "The Fool",
+      "arcana": "major",
+      "file": "00-TheFool-nouveau.png",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 1,
+      "name": "The Magician",
+      "arcana": "major",
+      "file": "01-TheMagician-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 2,
+      "name": "The High Priestess",
+      "arcana": "major",
+      "file": "02-TheHighPriestess-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 3,
+      "name": "The Empress",
+      "arcana": "major",
+      "file": "03-TheEmpress-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 4,
+      "name": "The Emperor",
+      "arcana": "major",
+      "file": "04-TheEmperor-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 5,
+      "name": "The Hierophant",
+      "arcana": "major",
+      "file": "05-TheHierophant-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 6,
+      "name": "The Lovers",
+      "arcana": "major",
+      "file": "06-TheLovers-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 7,
+      "name": "The Chariot",
+      "arcana": "major",
+      "file": "07-TheChariot-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 8,
+      "name": "Strength",
+      "arcana": "major",
+      "file": "08-Strength-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 9,
+      "name": "The Hermit",
+      "arcana": "major",
+      "file": "09-TheHermit-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 10,
+      "name": "Wheel of Fortune",
+      "arcana": "major",
+      "file": "10-WheelOfFortune-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 11,
+      "name": "Justice",
+      "arcana": "major",
+      "file": "11-Justice-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 12,
+      "name": "The Hanged Man",
+      "arcana": "major",
+      "file": "12-TheHangedMan-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 13,
+      "name": "Death",
+      "arcana": "major",
+      "file": "13-Death-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 14,
+      "name": "Temperance",
+      "arcana": "major",
+      "file": "14-Temperance-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 15,
+      "name": "The Devil",
+      "arcana": "major",
+      "file": "15-TheDevil-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 16,
+      "name": "The Tower",
+      "arcana": "major",
+      "file": "16-TheTower-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 17,
+      "name": "The Star",
+      "arcana": "major",
+      "file": "17-TheStar-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 18,
+      "name": "The Moon",
+      "arcana": "major",
+      "file": "18-TheMoon-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 19,
+      "name": "The Sun",
+      "arcana": "major",
+      "file": "19-TheSun-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 20,
+      "name": "Judgement",
+      "arcana": "major",
+      "file": "20-Judgement-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 21,
+      "name": "The World",
+      "arcana": "major",
+      "file": "21-TheWorld-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 22,
+      "name": "Ace of Wands",
+      "arcana": "wands",
+      "file": "wands-01-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 23,
+      "name": "Two of Wands",
+      "arcana": "wands",
+      "file": "wands-02-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 24,
+      "name": "Three of Wands",
+      "arcana": "wands",
+      "file": "wands-03-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 25,
+      "name": "Four of Wands",
+      "arcana": "wands",
+      "file": "wands-04-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 26,
+      "name": "Five of Wands",
+      "arcana": "wands",
+      "file": "wands-05-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 27,
+      "name": "Six of Wands",
+      "arcana": "wands",
+      "file": "wands-06-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 28,
+      "name": "Seven of Wands",
+      "arcana": "wands",
+      "file": "wands-07-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 29,
+      "name": "Eight of Wands",
+      "arcana": "wands",
+      "file": "wands-08-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 30,
+      "name": "Nine of Wands",
+      "arcana": "wands",
+      "file": "wands-09-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 31,
+      "name": "Ten of Wands",
+      "arcana": "wands",
+      "file": "wands-10-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 32,
+      "name": "Page of Wands",
+      "arcana": "wands",
+      "file": "wands-11-page-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 33,
+      "name": "Knight of Wands",
+      "arcana": "wands",
+      "file": "wands-12-knight-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 34,
+      "name": "Queen of Wands",
+      "arcana": "wands",
+      "file": "wands-13-queen-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 35,
+      "name": "King of Wands",
+      "arcana": "wands",
+      "file": "wands-14-king-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 36,
+      "name": "Ace of Cups",
+      "arcana": "cups",
+      "file": "cups-01-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 37,
+      "name": "Two of Cups",
+      "arcana": "cups",
+      "file": "cups-02-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 38,
+      "name": "Three of Cups",
+      "arcana": "cups",
+      "file": "cups-03-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 39,
+      "name": "Four of Cups",
+      "arcana": "cups",
+      "file": "cups-04-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 40,
+      "name": "Five of Cups",
+      "arcana": "cups",
+      "file": "cups-05-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 41,
+      "name": "Six of Cups",
+      "arcana": "cups",
+      "file": "cups-06-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 42,
+      "name": "Seven of Cups",
+      "arcana": "cups",
+      "file": "cups-07-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 43,
+      "name": "Eight of Cups",
+      "arcana": "cups",
+      "file": "cups-08-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 44,
+      "name": "Nine of Cups",
+      "arcana": "cups",
+      "file": "cups-09-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 45,
+      "name": "Ten of Cups",
+      "arcana": "cups",
+      "file": "cups-10-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 46,
+      "name": "Page of Cups",
+      "arcana": "cups",
+      "file": "cups-11-page-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 47,
+      "name": "Knight of Cups",
+      "arcana": "cups",
+      "file": "cups-12-knight-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 48,
+      "name": "Queen of Cups",
+      "arcana": "cups",
+      "file": "cups-13-queen-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 49,
+      "name": "King of Cups",
+      "arcana": "cups",
+      "file": "cups-14-king-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 50,
+      "name": "Ace of Swords",
+      "arcana": "swords",
+      "file": "swords-01-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 51,
+      "name": "Two of Swords",
+      "arcana": "swords",
+      "file": "swords-02-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 52,
+      "name": "Three of Swords",
+      "arcana": "swords",
+      "file": "swords-03-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 53,
+      "name": "Four of Swords",
+      "arcana": "swords",
+      "file": "swords-04-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 54,
+      "name": "Five of Swords",
+      "arcana": "swords",
+      "file": "swords-05-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 55,
+      "name": "Six of Swords",
+      "arcana": "swords",
+      "file": "swords-06-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 56,
+      "name": "Seven of Swords",
+      "arcana": "swords",
+      "file": "swords-07-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 57,
+      "name": "Eight of Swords",
+      "arcana": "swords",
+      "file": "swords-08-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 58,
+      "name": "Nine of Swords",
+      "arcana": "swords",
+      "file": "swords-09-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 59,
+      "name": "Ten of Swords",
+      "arcana": "swords",
+      "file": "swords-10-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 60,
+      "name": "Page of Swords",
+      "arcana": "swords",
+      "file": "swords-11-page-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 61,
+      "name": "Knight of Swords",
+      "arcana": "swords",
+      "file": "swords-12-knight-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 62,
+      "name": "Queen of Swords",
+      "arcana": "swords",
+      "file": "swords-13-queen-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 63,
+      "name": "King of Swords",
+      "arcana": "swords",
+      "file": "swords-14-king-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 64,
+      "name": "Ace of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-01-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 65,
+      "name": "Two of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-02-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 66,
+      "name": "Three of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-03-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 67,
+      "name": "Four of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-04-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 68,
+      "name": "Five of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-05-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 69,
+      "name": "Six of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-06-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 70,
+      "name": "Seven of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-07-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 71,
+      "name": "Eight of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-08-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 72,
+      "name": "Nine of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-09-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 73,
+      "name": "Ten of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-10-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 74,
+      "name": "Page of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-11-page-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 75,
+      "name": "Knight of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-12-knight-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 76,
+      "name": "Queen of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-13-queen-nouveau.jpg",
+      "status": "COMPLETED"
+    },
+    {
+      "id": 77,
+      "name": "King of Pentacles",
+      "arcana": "pentacles",
+      "file": "pentacles-14-king-nouveau.jpg",
+      "status": "COMPLETED"
+    }
   ]
 }
