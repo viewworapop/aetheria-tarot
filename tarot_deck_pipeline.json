@@ -4,8 +4,8 @@
   "quota_reset_utc": "2026-11-03T16:17:27Z",
   "status_summary": {
     "total": 78,
-    "completed": 16,
-    "pending": 62
+    "completed": 22,
+    "pending": 56
   },
   "cards": [
     { "id": 0, "name": "The Fool", "arcana": "major", "file": "00-TheFool-nouveau.png", "status": "COMPLETED" },
@@ -24,12 +24,12 @@
     { "id": 13, "name": "Death", "arcana": "major", "file": "13-Death-nouveau.jpg", "status": "COMPLETED" },
     { "id": 14, "name": "Temperance", "arcana": "major", "file": "14-Temperance-nouveau.jpg", "status": "COMPLETED" },
     { "id": 15, "name": "The Devil", "arcana": "major", "file": "15-TheDevil-nouveau.jpg", "status": "COMPLETED" },
-    { "id": 16, "name": "The Tower", "arcana": "major", "file": "16-TheTower-nouveau.jpg", "status": "PENDING" },
-    { "id": 17, "name": "The Star", "arcana": "major", "file": "17-TheStar-nouveau.jpg", "status": "PENDING" },
-    { "id": 18, "name": "The Moon", "arcana": "major", "file": "18-TheMoon-nouveau.jpg", "status": "PENDING" },
-    { "id": 19, "name": "The Sun", "arcana": "major", "file": "19-TheSun-nouveau.jpg", "status": "PENDING" },
-    { "id": 20, "name": "Judgement", "arcana": "major", "file": "20-Judgement-nouveau.jpg", "status": "PENDING" },
-    { "id": 21, "name": "The World", "arcana": "major", "file": "21-TheWorld-nouveau.jpg", "status": "PENDING" },
+    { "id": 16, "name": "The Tower", "arcana": "major", "file": "16-TheTower-nouveau.jpg", "status": "COMPLETED" },
+    { "id": 17, "name": "The Star", "arcana": "major", "file": "17-TheStar-nouveau.jpg", "status": "COMPLETED" },
+    { "id": 18, "name": "The Moon", "arcana": "major", "file": "18-TheMoon-nouveau.jpg", "status": "COMPLETED" },
+    { "id": 19, "name": "The Sun", "arcana": "major", "file": "19-TheSun-nouveau.jpg", "status": "COMPLETED" },
+    { "id": 20, "name": "Judgement", "arcana": "major", "file": "20-Judgement-nouveau.jpg", "status": "COMPLETED" },
+    { "id": 21, "name": "The World", "arcana": "major", "file": "21-TheWorld-nouveau.jpg", "status": "COMPLETED" },
     { "id": 22, "name": "Ace of Wands", "arcana": "wands", "file": "wands-01-nouveau.jpg", "status": "PENDING" },
     { "id": 23, "name": "Two of Wands", "arcana": "wands", "file": "wands-02-nouveau.jpg", "status": "PENDING" },
     { "id": 24, "name": "Three of Wands", "arcana": "wands", "file": "wands-03-nouveau.jpg", "status": "PENDING" },
